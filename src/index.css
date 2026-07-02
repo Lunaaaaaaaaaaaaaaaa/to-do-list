@@ -292,3 +292,32 @@ input[type="checkbox"]:checked + span {
 .input-row button:active {
   transform: scale(0.96);
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  /* Reduce the massive 4rem padding so content has room to breathe */
+  .card {
+    padding: 2rem 1.5rem;
+  }
+  
+  /* Stack the input and buttons vertically on small screens */
+  .input-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Force input and buttons to stay inside the box */
+  .input-row input {
+    min-width: 100%;
+    width: 100%;
+  }
+  
+  .input-row button {
+    width: 100%;
+  }
+  
+  /* Slightly shrink the title so it doesn't overflow */
+  .title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+}
